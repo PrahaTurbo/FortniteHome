@@ -35,7 +35,7 @@ For loading images I choose [NukeUI](https://github.com/kean/NukeUI) rather than
 * Full russian language support
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/62947475/166159636-b2a013de-4c5a-4b98-bc35-56d66a97bb5f.png" height="640"> <img src="https://user-images.githubusercontent.com/62947475/166159639-d6e0833e-3995-4558-875c-e01816029d61.png" height="640"> <img src="https://user-images.githubusercontent.com/62947475/166159651-50dd11cb-c58c-4f48-8189-cab23614f8e7.png" height="640"> <img src="https://user-images.githubusercontent.com/62947475/166159655-ec6c1d29-143d-4889-9616-fc1b3d474c29.png" height="640"> <img src="https://user-images.githubusercontent.com/62947475/166160805-875a8553-731d-443a-830d-670e11ef2315.png" height="640"> 
+<img src="https://user-images.githubusercontent.com/62947475/166159636-b2a013de-4c5a-4b98-bc35-56d66a97bb5f.png" height="640"> <img src="https://user-images.githubusercontent.com/62947475/166159639-d6e0833e-3995-4558-875c-e01816029d61.png" height="640"> <img src="https://user-images.githubusercontent.com/62947475/166159651-50dd11cb-c58c-4f48-8189-cab23614f8e7.png" height="640"> <img src="https://user-images.githubusercontent.com/62947475/166159655-ec6c1d29-143d-4889-9616-fc1b3d474c29.png" height="640">
 
 ## Requirements
 * Xcode 13.3.1 or later
