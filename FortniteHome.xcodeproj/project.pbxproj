@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B01F54652812B2FC006BE62A /* ShopSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01F54642812B2FC006BE62A /* ShopSection.swift */; };
+		B03565CE2808195B006E46A7 /* FortniteHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565CD2808195B006E46A7 /* FortniteHomeApp.swift */; };
+		B03565D02808195B006E46A7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565CF2808195B006E46A7 /* MainView.swift */; };
+		B03565D22808195D006E46A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03565D12808195D006E46A7 /* Assets.xcassets */; };
+		B03565D52808195D006E46A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03565D42808195D006E46A7 /* Preview Assets.xcassets */; };
+		B03565DC280819A3006E46A7 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565DB280819A3006E46A7 /* Shop.swift */; };
+		B03565E028085B2E006E46A7 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565DF28085B2E006E46A7 /* Stats.swift */; };
+		B03565E2280896A6006E46A7 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565E1280896A6006E46A7 /* News.swift */; };
+		B03565E428089FEB006E46A7 /* Cosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565E328089FEB006E46A7 /* Cosmetics.swift */; };
+		B03565E92809B8AA006E46A7 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565E82809B8AA006E46A7 /* NewsView.swift */; };
+		B03565EB2809B8C3006E46A7 /* NewsView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565EA2809B8C3006E46A7 /* NewsView-ViewModel.swift */; };
+		B03565EF280AA536006E46A7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565EE280AA536006E46A7 /* Service.swift */; };
+		B03565F6280D6309006E46A7 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565F5280D6309006E46A7 /* ShopView.swift */; };
+		B03565F8280D6339006E46A7 /* ShopView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565F7280D6339006E46A7 /* ShopView-ViewModel.swift */; };
+		B03565FA280D7818006E46A7 /* CosmeticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565F9280D7818006E46A7 /* CosmeticsView.swift */; };
+		B03565FC280D784E006E46A7 /* CosmeticsView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03565FB280D784E006E46A7 /* CosmeticsView-ViewModel.swift */; };
+		B04F131E28147F0700E10C1C /* ShopItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F131D28147F0700E10C1C /* ShopItemDetailsView.swift */; };
+		B04F1320281483B000E10C1C /* shopExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B04F131F281483B000E10C1C /* shopExample.json */; };
+		B04F1322281483EF00E10C1C /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F1321281483EF00E10C1C /* Bundle-Decodable.swift */; };
+		B04F13272815DED900E10C1C /* CosmeticDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F13262815DED900E10C1C /* CosmeticDetailsView.swift */; };
+		B04F132B2816B0CF00E10C1C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B04F132D2816B0CF00E10C1C /* Localizable.strings */; };
+		B04F133028172BBE00E10C1C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F132F28172BBE00E10C1C /* SearchBar.swift */; };
+		B04F13322817DF6600E10C1C /* CosmeticsTypeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F13312817DF6600E10C1C /* CosmeticsTypeFilter.swift */; };
+		B04F13342818074100E10C1C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F13332818074100E10C1C /* VideoView.swift */; };
+		B04F13362818216700E10C1C /* cosmeticsExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B04F13352818216700E10C1C /* cosmeticsExample.json */; };
+		B064867E280DF2F20001C220 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064867D280DF2F10001C220 /* StatsView.swift */; };
+		B0648680280DF32A0001C220 /* StatsView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064867F280DF32A0001C220 /* StatsView-ViewModel.swift */; };
+		B096A946280E733B000C338E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096A945280E733B000C338E /* CustomTabBar.swift */; };
+		B099E8D3281C800B00BFB4AE /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099E8D2281C800B00BFB4AE /* ShakeAnimation.swift */; };
+		B099E8D5281D00FE00BFB4AE /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099E8D4281D00FE00BFB4AE /* NavigationHelper.swift */; };
+		B099E8DA281F1BA900BFB4AE /* StatsSuccessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099E8D9281F1BA800BFB4AE /* StatsSuccessCard.swift */; };
+		B099E8DC281F1F8A00BFB4AE /* statsExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B099E8DB281F1F8A00BFB4AE /* statsExample.json */; };
+		B099E8DE281FB53600BFB4AE /* StatsErrorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099E8DD281FB53500BFB4AE /* StatsErrorCard.swift */; };
+		B099E8E0281FD26B00BFB4AE /* ItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099E8DF281FD26B00BFB4AE /* ItemsList.swift */; };
+		B0B69282281AC94A00B6D069 /* fortnitebattlefest.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0B69281281AC94A00B6D069 /* fortnitebattlefest.ttf */; };
+		B0E91F6C2812D8DC006FCC93 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B0E91F6B2812D8DC006FCC93 /* NukeUI */; };
+		B0EE592F2810121A005F967D /* NewsItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EE592E2810121A005F967D /* NewsItemCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B01F54642812B2FC006BE62A /* ShopSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSection.swift; sourceTree = "<group>"; };
+		B03565CA2808195B006E46A7 /* FortniteHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortniteHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03565CD2808195B006E46A7 /* FortniteHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortniteHomeApp.swift; sourceTree = "<group>"; };
+		B03565CF2808195B006E46A7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B03565D12808195D006E46A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B03565D42808195D006E46A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B03565DB280819A3006E46A7 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		B03565DF28085B2E006E46A7 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		B03565E1280896A6006E46A7 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		B03565E328089FEB006E46A7 /* Cosmetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmetics.swift; sourceTree = "<group>"; };
+		B03565E82809B8AA006E46A7 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		B03565EA2809B8C3006E46A7 /* NewsView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsView-ViewModel.swift"; sourceTree = "<group>"; };
+		B03565EE280AA536006E46A7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B03565F5280D6309006E46A7 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		B03565F7280D6339006E46A7 /* ShopView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopView-ViewModel.swift"; sourceTree = "<group>"; };
+		B03565F9280D7818006E46A7 /* CosmeticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticsView.swift; sourceTree = "<group>"; };
+		B03565FB280D784E006E46A7 /* CosmeticsView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CosmeticsView-ViewModel.swift"; sourceTree = "<group>"; };
+		B04F131D28147F0700E10C1C /* ShopItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemDetailsView.swift; sourceTree = "<group>"; };
+		B04F131F281483B000E10C1C /* shopExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shopExample.json; sourceTree = "<group>"; };
+		B04F1321281483EF00E10C1C /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		B04F13262815DED900E10C1C /* CosmeticDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticDetailsView.swift; sourceTree = "<group>"; };
+		B04F132E2816B0F600E10C1C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B04F132F28172BBE00E10C1C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B04F13312817DF6600E10C1C /* CosmeticsTypeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticsTypeFilter.swift; sourceTree = "<group>"; };
+		B04F13332818074100E10C1C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		B04F13352818216700E10C1C /* cosmeticsExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cosmeticsExample.json; sourceTree = "<group>"; };
+		B064867D280DF2F10001C220 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		B064867F280DF32A0001C220 /* StatsView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsView-ViewModel.swift"; sourceTree = "<group>"; };
+		B096A945280E733B000C338E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		B099E8D2281C800B00BFB4AE /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
+		B099E8D4281D00FE00BFB4AE /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		B099E8D9281F1BA800BFB4AE /* StatsSuccessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSuccessCard.swift; sourceTree = "<group>"; };
+		B099E8DB281F1F8A00BFB4AE /* statsExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = statsExample.json; sourceTree = "<group>"; };
+		B099E8DD281FB53500BFB4AE /* StatsErrorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsErrorCard.swift; sourceTree = "<group>"; };
+		B099E8DF281FD26B00BFB4AE /* ItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsList.swift; sourceTree = "<group>"; };
+		B0B69281281AC94A00B6D069 /* fortnitebattlefest.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fortnitebattlefest.ttf; sourceTree = "<group>"; };
+		B0EE592E2810121A005F967D /* NewsItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B03565C72808195B006E46A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E91F6C2812D8DC006FCC93 /* NukeUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B00D90FA281932CC004E701E /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				B064867D280DF2F10001C220 /* StatsView.swift */,
+				B099E8D9281F1BA800BFB4AE /* StatsSuccessCard.swift */,
+				B099E8DD281FB53500BFB4AE /* StatsErrorCard.swift */,
+				B099E8D2281C800B00BFB4AE /* ShakeAnimation.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		B01F545E28116D46006BE62A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				B03565E82809B8AA006E46A7 /* NewsView.swift */,
+				B0EE592E2810121A005F967D /* NewsItemCard.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		B01F545F28116D66006BE62A /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				B03565CF2808195B006E46A7 /* MainView.swift */,
+				B096A945280E733B000C338E /* CustomTabBar.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		B01F54662812B303006BE62A /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				B03565F5280D6309006E46A7 /* ShopView.swift */,
+				B01F54642812B2FC006BE62A /* ShopSection.swift */,
+				B04F131D28147F0700E10C1C /* ShopItemDetailsView.swift */,
+				B099E8DF281FD26B00BFB4AE /* ItemsList.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		B03565C12808195B006E46A7 = {
+			isa = PBXGroup;
+			children = (
+				B03565CC2808195B006E46A7 /* FortniteHome */,
+				B03565CB2808195B006E46A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B03565CB2808195B006E46A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B03565CA2808195B006E46A7 /* FortniteHome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B03565CC2808195B006E46A7 /* FortniteHome */ = {
+			isa = PBXGroup;
+			children = (
+				B03565CD2808195B006E46A7 /* FortniteHomeApp.swift */,
+				B03565F0280AA53D006E46A7 /* Service */,
+				B03565E52809712A006E46A7 /* Models */,
+				B03565F1280D6265006E46A7 /* Views */,
+				B03565F2280D6271006E46A7 /* ViewModels */,
+				B099E8D8281EB2DC00BFB4AE /* TestModels */,
+				B0B6927F281AC90E00B6D069 /* Fonts */,
+				B04F132D2816B0CF00E10C1C /* Localizable.strings */,
+				B03565D12808195D006E46A7 /* Assets.xcassets */,
+				B03565D32808195D006E46A7 /* Preview Content */,
+			);
+			path = FortniteHome;
+			sourceTree = "<group>";
+		};
+		B03565D32808195D006E46A7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B03565D42808195D006E46A7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B03565E52809712A006E46A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B03565E328089FEB006E46A7 /* Cosmetics.swift */,
+				B03565E1280896A6006E46A7 /* News.swift */,
+				B03565DB280819A3006E46A7 /* Shop.swift */,
+				B03565DF28085B2E006E46A7 /* Stats.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B03565F0280AA53D006E46A7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B03565EE280AA536006E46A7 /* Service.swift */,
+				B099E8D4281D00FE00BFB4AE /* NavigationHelper.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B03565F1280D6265006E46A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B01F545F28116D66006BE62A /* MainView */,
+				B01F545E28116D46006BE62A /* News */,
+				B01F54662812B303006BE62A /* Shop */,
+				B04F13232815A5BA00E10C1C /* Cosmetics */,
+				B00D90FA281932CC004E701E /* Stats */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B03565F2280D6271006E46A7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B03565EA2809B8C3006E46A7 /* NewsView-ViewModel.swift */,
+				B064867F280DF32A0001C220 /* StatsView-ViewModel.swift */,
+				B03565F7280D6339006E46A7 /* ShopView-ViewModel.swift */,
+				B03565FB280D784E006E46A7 /* CosmeticsView-ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B04F13232815A5BA00E10C1C /* Cosmetics */ = {
+			isa = PBXGroup;
+			children = (
+				B03565F9280D7818006E46A7 /* CosmeticsView.swift */,
+				B04F13312817DF6600E10C1C /* CosmeticsTypeFilter.swift */,
+				B04F13262815DED900E10C1C /* CosmeticDetailsView.swift */,
+				B04F132F28172BBE00E10C1C /* SearchBar.swift */,
+				B04F13332818074100E10C1C /* VideoView.swift */,
+			);
+			path = Cosmetics;
+			sourceTree = "<group>";
+		};
+		B099E8D8281EB2DC00BFB4AE /* TestModels */ = {
+			isa = PBXGroup;
+			children = (
+				B04F1321281483EF00E10C1C /* Bundle-Decodable.swift */,
+				B099E8DB281F1F8A00BFB4AE /* statsExample.json */,
+				B04F13352818216700E10C1C /* cosmeticsExample.json */,
+				B04F131F281483B000E10C1C /* shopExample.json */,
+			);
+			path = TestModels;
+			sourceTree = "<group>";
+		};
+		B0B6927F281AC90E00B6D069 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B0B69281281AC94A00B6D069 /* fortnitebattlefest.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B03565C92808195B006E46A7 /* FortniteHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B03565D82808195D006E46A7 /* Build configuration list for PBXNativeTarget "FortniteHome" */;
+			buildPhases = (
+				B03565C62808195B006E46A7 /* Sources */,
+				B03565C72808195B006E46A7 /* Frameworks */,
+				B03565C82808195B006E46A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FortniteHome;
+			packageProductDependencies = (
+				B0E91F6B2812D8DC006FCC93 /* NukeUI */,
+			);
+			productName = FortniteHome;
+			productReference = B03565CA2808195B006E46A7 /* FortniteHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B03565C22808195B006E46A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					B03565C92808195B006E46A7 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = B03565C52808195B006E46A7 /* Build configuration list for PBXProject "FortniteHome" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = B03565C12808195B006E46A7;
+			packageReferences = (
+				B0E91F6A2812D8DB006FCC93 /* XCRemoteSwiftPackageReference "NukeUI" */,
+			);
+			productRefGroup = B03565CB2808195B006E46A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B03565C92808195B006E46A7 /* FortniteHome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B03565C82808195B006E46A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03565D52808195D006E46A7 /* Preview Assets.xcassets in Resources */,
+				B0B69282281AC94A00B6D069 /* fortnitebattlefest.ttf in Resources */,
+				B04F132B2816B0CF00E10C1C /* Localizable.strings in Resources */,
+				B03565D22808195D006E46A7 /* Assets.xcassets in Resources */,
+				B04F1320281483B000E10C1C /* shopExample.json in Resources */,
+				B04F13362818216700E10C1C /* cosmeticsExample.json in Resources */,
+				B099E8DC281F1F8A00BFB4AE /* statsExample.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B03565C62808195B006E46A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03565F8280D6339006E46A7 /* ShopView-ViewModel.swift in Sources */,
+				B0648680280DF32A0001C220 /* StatsView-ViewModel.swift in Sources */,
+				B04F13342818074100E10C1C /* VideoView.swift in Sources */,
+				B04F13272815DED900E10C1C /* CosmeticDetailsView.swift in Sources */,
+				B04F1322281483EF00E10C1C /* Bundle-Decodable.swift in Sources */,
+				B096A946280E733B000C338E /* CustomTabBar.swift in Sources */,
+				B03565E428089FEB006E46A7 /* Cosmetics.swift in Sources */,
+				B03565E92809B8AA006E46A7 /* NewsView.swift in Sources */,
+				B03565DC280819A3006E46A7 /* Shop.swift in Sources */,
+				B03565EB2809B8C3006E46A7 /* NewsView-ViewModel.swift in Sources */,
+				B01F54652812B2FC006BE62A /* ShopSection.swift in Sources */,
+				B03565E028085B2E006E46A7 /* Stats.swift in Sources */,
+				B04F13322817DF6600E10C1C /* CosmeticsTypeFilter.swift in Sources */,
+				B03565D02808195B006E46A7 /* MainView.swift in Sources */,
+				B04F133028172BBE00E10C1C /* SearchBar.swift in Sources */,
+				B099E8E0281FD26B00BFB4AE /* ItemsList.swift in Sources */,
+				B03565F6280D6309006E46A7 /* ShopView.swift in Sources */,
+				B099E8D3281C800B00BFB4AE /* ShakeAnimation.swift in Sources */,
+				B03565FA280D7818006E46A7 /* CosmeticsView.swift in Sources */,
+				B03565E2280896A6006E46A7 /* News.swift in Sources */,
+				B099E8DA281F1BA900BFB4AE /* StatsSuccessCard.swift in Sources */,
+				B064867E280DF2F20001C220 /* StatsView.swift in Sources */,
+				B03565EF280AA536006E46A7 /* Service.swift in Sources */,
+				B03565CE2808195B006E46A7 /* FortniteHomeApp.swift in Sources */,
+				B03565FC280D784E006E46A7 /* CosmeticsView-ViewModel.swift in Sources */,
+				B04F131E28147F0700E10C1C /* ShopItemDetailsView.swift in Sources */,
+				B099E8D5281D00FE00BFB4AE /* NavigationHelper.swift in Sources */,
+				B099E8DE281FB53600BFB4AE /* StatsErrorCard.swift in Sources */,
+				B0EE592F2810121A005F967D /* NewsItemCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B04F132D2816B0CF00E10C1C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B04F132E2816B0F600E10C1C /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B03565D62808195D006E46A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B03565D72808195D006E46A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B03565D92808195D006E46A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FortniteHome/Preview Content\"";
+				DEVELOPMENT_TEAM = JMZJD938W9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FortniteHome/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lastovich.artem.FortniteHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B03565DA2808195D006E46A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FortniteHome/Preview Content\"";
+				DEVELOPMENT_TEAM = JMZJD938W9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FortniteHome/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lastovich.artem.FortniteHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B03565C52808195B006E46A7 /* Build configuration list for PBXProject "FortniteHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03565D62808195D006E46A7 /* Debug */,
+				B03565D72808195D006E46A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B03565D82808195D006E46A7 /* Build configuration list for PBXNativeTarget "FortniteHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B03565D92808195D006E46A7 /* Debug */,
+				B03565DA2808195D006E46A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0E91F6A2812D8DB006FCC93 /* XCRemoteSwiftPackageReference "NukeUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/NukeUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0E91F6B2812D8DC006FCC93 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0E91F6A2812D8DB006FCC93 /* XCRemoteSwiftPackageReference "NukeUI" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B03565C22808195B006E46A7 /* Project object */;
+}
