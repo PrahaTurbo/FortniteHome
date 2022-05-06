@@ -80,7 +80,7 @@ struct CosmeticDetailsView: View {
                         }
                         
                         if let shopHistory = item.shopHistory {
-                            Text("Последнее появление в магазине: \n\(shopHistory.last?.formatted(date: .abbreviated, time: .omitted) ?? "N/A")")
+                            Text("Последнее появление в магазине: \(shopHistory.last?.formatted(date: .abbreviated, time: .omitted) ?? "N/A")")
                                 .foregroundColor(.secondary)
                                 .padding(.top)
                         }

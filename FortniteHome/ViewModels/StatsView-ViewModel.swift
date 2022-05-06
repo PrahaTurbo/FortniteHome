@@ -17,11 +17,15 @@ extension StatsView {
             didSet {
                 if !name.isEmpty {
                     let encoder = JSONEncoder()
-                    if let encoded = try? encoder.encode(name) {
+                    if let encoded = try? encoder.encode(trimmedName) {
                         UserDefaults.standard.set(encoded, forKey: "Name")
                     }
                 }
             }
+        }
+        
+        var trimmedName: String {
+            name.trimmingCharacters(in: .whitespacesAndNewlines)
         }
         
         let url = "https://fortnite-api.com/v2/stats/br/v2?name="
@@ -30,7 +34,7 @@ extension StatsView {
         
         func getStats() async {
             do {
-                let result: Stats = try await service.fetchData(url: url + name)
+                let result: Stats = try await service.fetchData(url: url + trimmedName)
                 stats = result
             } catch {
                 print(error.localizedDescription)
