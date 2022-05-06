@@ -19,7 +19,7 @@ This is companion app for Fortnite. The app uses non-official API [Fortnite-API]
 
 It written entirely in SwiftUI with just one UIKit Representable for WebView. I tried to follow MVVM architecture principles as much as my skills afforded me.
 
-For loading images I'v choosed [NukeUI](https://github.com/kean/NukeUI) rather than build-in AsyncImage because NukeUI works better with Lazy Grid and it's does quite a good job in memory managing area.
+For loading images I've choosed [NukeUI](https://github.com/kean/NukeUI) rather than build-in AsyncImage because NukeUI works better with Lazy Grid and it does quite a good job in memory managing area.
 
 ## Technologies Used
 * Swift 5.6
