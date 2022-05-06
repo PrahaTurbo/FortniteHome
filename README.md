@@ -15,9 +15,9 @@
 * [Getting Started](#getting-started)
 
 ## General Information
-This is companion app for Fortnite. The app uses non-official API [Fortnite-API](https://dash.fortnite-api.com/) to display current information about the game.
+This is a companion app for Fortnite. The app uses non-official API [Fortnite-API](https://dash.fortnite-api.com/) to display current information about the game.
 
-It written entirely in SwiftUI with just one UIKit Representable for WebView. I tried to follow MVVM architecture principles as much as my skills afforded me.
+It written entirely in SwiftUI with just one UIKit Representable for WebView. I tried to follow MVVM architecture principles as much as my skills let me.
 
 For loading images I've choosed [NukeUI](https://github.com/kean/NukeUI) rather than build-in AsyncImage because NukeUI works better with Lazy Grid and it does quite a good job in memory managing area.
 
@@ -30,8 +30,8 @@ For loading images I've choosed [NukeUI](https://github.com/kean/NukeUI) rather 
 * Latest news of Battle Royale mode
 * Current daily shop deals
 * Full catalog browser with filter and search
-* Most of the items have an embedded YouTube video with presentation
-* See in-game statistics for provided nickname
+* Most of the items have an embedded YouTube video
+* In-game statistics for provided nickname
 * Full russian language support
 
 ## Screenshots
