@@ -17,7 +17,7 @@
 ## General Information
 This is a companion app for Fortnite. The app uses non-official API [Fortnite-API](https://dash.fortnite-api.com/) to display current information about the game.
 
-It written entirely in SwiftUI with just one UIKit Representable for WebView. I tried to follow MVVM architecture principles as much as my skills let me.
+It is written entirely in SwiftUI with just one UIKit Representable for WebView. I tried to follow MVVM architecture principles as much as my skills let me.
 
 For loading images I've choosed [NukeUI](https://github.com/kean/NukeUI) rather than build-in AsyncImage because NukeUI works better with Lazy Grid and it does quite a good job in memory managing area.
 
