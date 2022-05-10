@@ -4,7 +4,7 @@
 [![@artlast](https://img.shields.io/badge/telegram-%40artlast-blue)](https://t.me/artlast)
 
 # FortniteHome
-![promo_gif](https://user-images.githubusercontent.com/62947475/166158414-2a2976db-45b1-4c8f-a38b-3c6d4b84c33f.gif) 
+![promo_gif](https://user-images.githubusercontent.com/62947475/167585107-71bba5b1-b6a9-4b92-bf77-e3bb51f4d655.gif)
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -35,7 +35,7 @@ For loading images I've choosed [NukeUI](https://github.com/kean/NukeUI) rather 
 * Full Russian and English language support
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/62947475/166159636-b2a013de-4c5a-4b98-bc35-56d66a97bb5f.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/166159639-d6e0833e-3995-4558-875c-e01816029d61.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/166159651-50dd11cb-c58c-4f48-8189-cab23614f8e7.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/166159655-ec6c1d29-143d-4889-9616-fc1b3d474c29.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/167004682-a81d3047-575f-462d-9c08-69de5c3f5399.png" height="320">
+<img src="https://user-images.githubusercontent.com/62947475/167585474-21ca2bae-4f7c-42af-81ff-7240c8a1230e.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/167585520-f591573c-8052-4e73-a2e2-7d7ddbf8b7b0.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/167585530-64fe3068-cacf-40f3-a3e1-d2fd7a682737.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/167585535-dd708215-d561-4373-81b4-91f66587ee33.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/167585539-64935121-493e-4999-ac7e-e3b210049fd4.png" height="320">
 
 ## Requirements
 * Xcode 13.3.1 or later
