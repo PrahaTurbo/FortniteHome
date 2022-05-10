@@ -19,12 +19,12 @@ struct StatsView: View {
                 
                 VStack {
                     if !viewModel.showingStats {
-                        VStack(alignment: .leading) {
-                            Text("Введи свой никнейм в Fortnite, чтобы увидеть свою статистику:")
+                        VStack {
+                            Text("stats-input-nickname-text")
                                 .multilineTextAlignment(.center)
                             
                             HStack {
-                                TextField("Никнейм", text: $viewModel.name)
+                                TextField("nickname-placeholder", text: $viewModel.name)
                                     .focused($isFocusing)
                                     .submitLabel(.done)
                                     .onSubmit {
@@ -61,7 +61,7 @@ struct StatsView: View {
                                     }
                                 }
                             } label: {
-                                Text("Показать")
+                                Text("show-button-text")
                                     .frame(maxWidth: .infinity)
                                     .font(.title2.bold())
                                     .padding()
@@ -83,7 +83,7 @@ struct StatsView: View {
                             StatsSuccessCard(stats: stats)
                         } else {
                             VStack {
-                                StatsErrorCard(title: "Такого игрока нет", icon: "xmark.circle.fill", iconColor: .red)
+                                StatsErrorCard(title: "no-such-player", icon: "xmark.circle.fill", iconColor: .red)
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -97,7 +97,7 @@ struct StatsView: View {
                 .padding()
                 .padding(.bottom, 30)
                 .padding(.bottom, getSaveArea().bottom == 0 ? 20 : 0)
-                .navigationTitle("Профиль")
+                .navigationTitle("profile-title")
                 .ignoresSafeArea(.keyboard)
             }
         }

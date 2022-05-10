@@ -21,7 +21,7 @@ struct SearchBar: View {
                     HStack {
                         Image(systemName: "magnifyingglass")
                         
-                        TextField("Поиск", text: $searchText)
+                        TextField("search-placeholder", text: $searchText)
                             .focused($searchIsFocused)
                             .submitLabel(.done)
                             .disableAutocorrection(true)

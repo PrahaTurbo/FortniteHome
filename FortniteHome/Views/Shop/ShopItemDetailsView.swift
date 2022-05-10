@@ -62,7 +62,7 @@ struct ShopItemDetailsView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.bottom)
                     
-                    Text("В состав входят:")
+                    Text("includes-title")
                         .font(.title2.bold())
                     
                     ItemsList(items: entry.items)                    

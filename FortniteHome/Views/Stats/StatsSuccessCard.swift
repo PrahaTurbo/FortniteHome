@@ -38,7 +38,7 @@ struct StatsSuccessCard: View {
                         Text(String(overall.kills))
                             .font(.title.weight(.black))
                         
-                        Text("убийств")
+                        Text("kills-stats")
                             .foregroundColor(.secondary)
                     }
                     .frame(width: 100)
@@ -50,7 +50,7 @@ struct StatsSuccessCard: View {
                         Text(String(overall.deaths))
                             .font(.title.weight(.black))
                         
-                        Text("смертей")
+                        Text("deaths-stats")
                             .foregroundColor(.secondary)
                     }
                     .frame(width: 100)
@@ -64,7 +64,7 @@ struct StatsSuccessCard: View {
                         Text(String(overall.wins))
                             .font(.title.weight(.black))
                         
-                        Text("побед")
+                        Text("wins-stats")
                             .foregroundColor(.secondary)
                     }
                     .frame(width: 100)
@@ -76,7 +76,7 @@ struct StatsSuccessCard: View {
                         Text(String(overall.matches))
                             .font(.title.weight(.black))
                         
-                        Text("матчей")
+                        Text("matches-stats")
                             .foregroundColor(.secondary)
                     }
                     .frame(width: 100)
@@ -90,7 +90,7 @@ struct StatsSuccessCard: View {
                         Text(String(format: "%.1f", overall.kd))
                             .font(.title.weight(.black))
                         
-                        Text("к/д")
+                        Text("kd-stats")
                             .foregroundColor(.secondary)
                     }
                     .frame(width: 100)
@@ -102,14 +102,14 @@ struct StatsSuccessCard: View {
                         Text(String(overall.minutesPlayed))
                             .font(.title.weight(.black))
                         
-                        Text("минут")
+                        Text("minutes-stats")
                             .foregroundColor(.secondary)
                     }
                     .frame(width: 100)
                     
                 }
             } else {
-                StatsErrorCard(title: "Статистики пока нет :(", icon: "exclamationmark.triangle.fill", iconColor: Color("Yellow"))
+                StatsErrorCard(title: "no-stats-yet", icon: "exclamationmark.triangle.fill", iconColor: Color("Yellow"))
             }
         }
         .padding()

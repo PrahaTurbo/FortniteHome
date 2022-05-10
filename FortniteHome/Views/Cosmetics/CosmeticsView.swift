@@ -31,7 +31,7 @@ struct CosmeticsView: View {
                     .padding(.bottom, getSaveArea().bottom == 0 ? 20 : 0)
                     .animation(.spring(), value: viewModel.searchText)
                 }
-                .navigationTitle("Предметы")
+                .navigationTitle("items-title")
                 
                 if viewModel.isLoading {
                     Color("Dark")
@@ -41,7 +41,6 @@ struct CosmeticsView: View {
                 }
             }
         }
-        .environment(\.locale, .init(identifier: "ru"))
     }
 }
 

@@ -18,13 +18,23 @@ extension ShopView {
         
         @Published var isLoading = true
         
-        let url = "https://fortnite-api.com/v2/shop/br?language=ru"
+        let url = "https://fortnite-api.com/v2/shop/br?language="
+        
+        var localLanguage = Locale.preferredLanguages.first?.dropLast(3)
+        
+        var wrappedLanguage: String {
+            if localLanguage == "ru" {
+                return String(localLanguage ?? "ru")
+            } else {
+                return "en"
+            }
+        }
         
         private let service = Service()
         
         func getItems() async {
             do {
-                let result: ShopCollection = try await service.fetchData(url: url)
+                let result: ShopCollection = try await service.fetchData(url: url + wrappedLanguage)
                 featuredSection = result.featuredSection
                 dailySection = result.dailySection
                 specialFeaturedSection = result.specialFeaturedSection

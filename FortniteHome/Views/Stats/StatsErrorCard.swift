@@ -21,14 +21,14 @@ struct StatsErrorCard: View {
                 .font(.title)
                 .padding()
             
-            Text(title)
+            Text(LocalizedStringKey(title))
             
             Button {
                 withAnimation(.spring()) {
                     viewModel.reset()
                 }
             } label: {
-                Text("ОК")
+                Text("OK")
                     .frame(maxWidth: .infinity)
                     .font(.title2.bold())
                     .padding()

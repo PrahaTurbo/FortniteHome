@@ -41,7 +41,7 @@ struct NewsView: View {
             .task {
                 await viewModel.getNews()
             }
-            .navigationTitle("Новости")
+            .navigationTitle("news-title")
         }
     }
     

@@ -83,6 +83,7 @@
 		B099E8DD281FB53500BFB4AE /* StatsErrorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsErrorCard.swift; sourceTree = "<group>"; };
 		B099E8DF281FD26B00BFB4AE /* ItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsList.swift; sourceTree = "<group>"; };
 		B0B69281281AC94A00B6D069 /* fortnitebattlefest.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fortnitebattlefest.ttf; sourceTree = "<group>"; };
+		B0DAD38728298BDB003DFE0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0EE592E2810121A005F967D /* NewsItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -374,6 +375,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B04F132E2816B0F600E10C1C /* ru */,
+				B0DAD38728298BDB003DFE0F /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

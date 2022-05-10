@@ -74,15 +74,17 @@ struct CosmeticDetailsView: View {
                         Text(item.description)
                         
                         if let introduction = item.introduction {
-                            Text("Первое появление: ")
-                            + Text("Глава \(introduction.chapter), Сезон \(introduction.season).")
+                            Text(introduction.text)
                                 .bold()
                         }
                         
                         if let shopHistory = item.shopHistory {
-                            Text("Последнее появление в магазине: \(shopHistory.last?.formatted(date: .abbreviated, time: .omitted) ?? "N/A")")
-                                .foregroundColor(.secondary)
-                                .padding(.top)
+                            VStack {
+                                Text("last-seen")
+                                + Text("\(shopHistory.last?.formatted(date: .abbreviated, time: .omitted) ?? "N/A")")
+                            }
+                            .foregroundColor(.secondary)
+                            .padding(.top)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)

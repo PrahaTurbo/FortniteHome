@@ -17,17 +17,17 @@ struct ShopView: View {
                 
                 ScrollView {
                     VStack {
-                        ShopSection(items: viewModel.featuredSection, title: "Рекомендуемое")
+                        ShopSection(items: viewModel.featuredSection, title: "featured-title")
                         
-                        ShopSection(items: viewModel.specialFeaturedSection, title: "Специальное")
+                        ShopSection(items: viewModel.specialFeaturedSection, title: "special-title")
                         
-                        ShopSection(items: viewModel.dailySection, title: "Ежедневное")
+                        ShopSection(items: viewModel.dailySection, title: "daily-title")
                         
-                        ShopSection(items: viewModel.specialDailySection, title: "Специальное ежедневное")
+                        ShopSection(items: viewModel.specialDailySection, title: "special-daily-title")
                         
-                        ShopSection(items: viewModel.voteWinnersSection, title: "Победители голосования")
+                        ShopSection(items: viewModel.voteWinnersSection, title: "vote-winners-title")
                         
-                        ShopSection(items: viewModel.votesSection, title: "Голосование")
+                        ShopSection(items: viewModel.votesSection, title: "votes-title")
                         
                     }
                     .padding(.horizontal)
@@ -46,10 +46,9 @@ struct ShopView: View {
                 viewModel.isLoading = false
                 await viewModel.getItems()
             }
-            .navigationTitle("Магазин")
+            .navigationTitle("shop-title")
             
         }
-        .environment(\.locale, .init(identifier: "ru"))
     }
     
     init() {

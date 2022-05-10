@@ -12,7 +12,7 @@ struct ShopSection: View {
     @EnvironmentObject var navigationHelper: NavigationHelper
     
     let items: [Shop.ShopData.ShopSection.Entry]
-    let title: String
+    let title: LocalizedStringKey
     
     let columns = [
         GridItem(.flexible()),

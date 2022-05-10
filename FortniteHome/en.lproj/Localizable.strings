@@ -6,5 +6,43 @@
   
 */
 
+"Back" = "Back";
+"news-title" = "News";
+"shop-title" = "Shop";
+"featured-title" = "Featured";
+"special-title" = "Special Featured";
+"daily-title" = "Daily";
+"special-daily-title" = "Special Daily";
+"vote-winners-title" = "Vote Winners";
+"votes-title" = "Votes";
+"includes-title" = "Includes:";
+"items-title" = "Items";
 
+//filter names
+"spray-type" = "Spray";
+"backpack-type" = "Back Bling";
+"glider-type" = "Glider";
+"outfit-type" = "Outfit";
+"music-type" = "Music";
+"wrap-type" = "Wrap";
+"emote-type" = "Emote";
+"contrail-type" = "Contrail";
+"pickaxe-type" = "Harvesting Tool";
+"loadingscreen-type" = "Loading Screen";
+"all-type" = "All";
+"unknown-type" = "Unknown";
 
+"last-seen" = "Last seen: ";
+"search-placeholder" = "Search";
+"stats-input-nickname-text" = "Enter your Fortnite nickname to see your stats:";
+"nickname-placeholder" = "Nickname";
+"show-button-text" = "Show";
+"no-such-player" = "There is no such player";
+"profile-title" = "Profile";
+"kills-stats" = "kills";
+"deaths-stats" = "deaths";
+"wins-stats" = "wins";
+"matches-stats" = "matches";
+"kd-stats" = "k/d";
+"minutes-stats" = "minutes";
+"no-stats-yet" = "No stats yet :(";

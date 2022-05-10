@@ -32,7 +32,7 @@ For loading images I've choosed [NukeUI](https://github.com/kean/NukeUI) rather 
 * Full catalog browser with filter and search
 * Most of the items have an embedded YouTube video
 * In-game statistics for provided nickname
-* Full russian language support
+* Full Russian and English language support
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/62947475/166159636-b2a013de-4c5a-4b98-bc35-56d66a97bb5f.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/166159639-d6e0833e-3995-4558-875c-e01816029d61.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/166159651-50dd11cb-c58c-4f48-8189-cab23614f8e7.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/166159655-ec6c1d29-143d-4889-9616-fc1b3d474c29.png" height="320"> <img src="https://user-images.githubusercontent.com/62947475/167004682-a81d3047-575f-462d-9c08-69de5c3f5399.png" height="320">

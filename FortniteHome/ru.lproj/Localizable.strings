@@ -7,4 +7,42 @@
 */
 
 "Back" = "Назад";
+"news-title" = "Новости";
+"shop-title" = "Магазин";
+"featured-title" = "Рекомендуемое";
+"special-title" = "Специальное";
+"daily-title" = "Ежедневное";
+"special-daily-title" = "Специальное ежедневное";
+"vote-winners-title" = "Победители голосования";
+"votes-title" = "Голосование";
+"includes-title" = "В состав входят:";
+"items-title" = "Предметы";
 
+//filter names
+"spray-type" = "Граффити";
+"backpack-type" = "Украшение на спину";
+"glider-type" = "Дельтаплан";
+"outfit-type" = "Экипировка";
+"music-type" = "Музыка";
+"wrap-type" = "Обёртка";
+"emote-type" = "Эмоция";
+"contrail-type" = "Воздушный cлед";
+"pickaxe-type" = "Инструмент";
+"loadingscreen-type" = "Экран загрузки";
+"all-type" = "Все";
+"unknown-type" = "Неизвестный тип";
+
+"last-seen" = "Последнее появление: ";
+"search-placeholder" = "Поиск";
+"stats-input-nickname-text" = "Введи свой никнейм в Fortnite, чтобы увидеть свою статистику:";
+"nickname-placeholder" = "Никнейм";
+"show-button-text" = "Показать";
+"no-such-player" = "Такого игрока нет";
+"profile-title" = "Профиль";
+"kills-stats" = "убийств";
+"deaths-stats" = "смертей";
+"wins-stats" = "побед";
+"matches-stats" = "матчей";
+"kd-stats" = "к/д";
+"minutes-stats" = "минут";
+"no-stats-yet" = "Статистики пока нет :(";

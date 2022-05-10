@@ -13,7 +13,17 @@ import Foundation
     @Published var currentSortingType: Cosmetics.Types = .all
     @Published var isLoading = false
     
-    let url = "https://fortnite-api.com/v2/cosmetics/br?language=ru"
+    let url = "https://fortnite-api.com/v2/cosmetics/br?language="
+    
+    var localLanguage = Locale.preferredLanguages.first?.dropLast(3)
+    
+    var wrappedLanguage: String {
+        if localLanguage == "ru" {
+            return String(localLanguage ?? "ru")
+        } else {
+            return "en"
+        }
+    }
     
     private let service = Service()
     
@@ -56,7 +66,7 @@ import Foundation
         do {
             isLoading = true
             
-            let result: Cosmetics = try await service.fetchData(url: url)
+            let result: Cosmetics = try await service.fetchData(url: url + wrappedLanguage)
             cosmeticItems = result.items
             let types = result.items.map { $0.type.value }
             var uniqueTypes = Set(types).sorted()

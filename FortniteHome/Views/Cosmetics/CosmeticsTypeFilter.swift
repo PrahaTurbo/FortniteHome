@@ -17,29 +17,29 @@ struct CosmeticsTypeFilter: View {
         for type in types {
             switch type {
             case Cosmetics.Types.spray.rawValue:
-                results.append("Граффити")
+                results.append("spray-type")
             case Cosmetics.Types.backpack.rawValue:
-                results.append("Украшение на спину")
+                results.append("backpack-type")
             case Cosmetics.Types.glider.rawValue:
-                results.append("Дельтаплан")
+                results.append("glider-type")
             case Cosmetics.Types.outfit.rawValue:
-                results.append("Экипировка")
+                results.append("outfit-type")
             case Cosmetics.Types.music.rawValue:
-                results.append("Музыка")
+                results.append("music-type")
             case Cosmetics.Types.wrap.rawValue:
-                results.append("Обёртка")
+                results.append("wrap-type")
             case Cosmetics.Types.emote.rawValue:
-                results.append("Эмоция")
+                results.append("emote-type")
             case Cosmetics.Types.contrail.rawValue:
-                results.append("Воздушный cлед")
+                results.append("contrail-type")
             case Cosmetics.Types.pickaxe.rawValue:
-                results.append("Инструмент")
+                results.append("pickaxe-type")
             case Cosmetics.Types.loadingscreen.rawValue:
-                results.append("Экран загрузки")
+                results.append("loadingscreen-type")
             case Cosmetics.Types.all.rawValue:
-                results.append("Все")
+                results.append("all-type")
             default:
-                results.append("Неизвестный тип")
+                results.append("unknown-type")
             }
         }
                 
@@ -50,7 +50,7 @@ struct CosmeticsTypeFilter: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(0..<types.count, id: \.self) { index in
-                    Text(localizedTypes[index])
+                    Text(LocalizedStringKey(localizedTypes[index]))
                         .font(.subheadline)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)
@@ -60,10 +60,9 @@ struct CosmeticsTypeFilter: View {
                         .onTapGesture {
                             sortSelection = Cosmetics.Types(rawValue: types[index]) ?? .all
                         }
-                        .padding(.leading, index == 0 ? 16 : 0)
-                        .padding(.trailing, index == types.count - 1 ? 16 : 0)
                 }
             }
+            .padding(.horizontal)
         }
     }
 }
