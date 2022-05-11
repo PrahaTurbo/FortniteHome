@@ -30,6 +30,8 @@ struct StatsView: View {
                                     .onSubmit {
                                         isFocusing = false
                                     }
+                                    .textInputAutocapitalization(.never)
+                                    .disableAutocorrection(true)
                                     .modifier(Shake(animatableData: CGFloat(viewModel.attempts)))
                                 
                                 if !viewModel.name.isEmpty {
