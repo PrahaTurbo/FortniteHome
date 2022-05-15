@@ -74,5 +74,6 @@ struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
         ShopView()
             .preferredColorScheme(.dark)
+            .environmentObject(NavigationHelper())
     }
 }

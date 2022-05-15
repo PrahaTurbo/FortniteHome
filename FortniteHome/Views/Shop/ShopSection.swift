@@ -32,9 +32,23 @@ struct ShopSection: View {
                                     ZStack(alignment: .bottomLeading) {
                                         LazyImage(source: url) { state in
                                             if let image = state.image {
-                                                image
-                                                    .resizingMode(.aspectFit)
-                                                
+                                                ZStack(alignment: .topLeading) {
+                                                    image
+                                                        .resizingMode(.aspectFit)
+                                                    
+                                                    if let bannerText = item.banner?.value {
+                                                        if bannerText == "New!" || bannerText == "Новинка!" {
+                                                            Text(bannerText)
+                                                                .font(.subheadline.bold())
+                                                                .padding(5)
+                                                                .background(Color("Yellow"))
+                                                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                                                .padding(10)
+                                                                .foregroundColor(Color("Dark"))
+                                                                
+                                                        }
+                                                    }
+                                                }
                                             } else if state.error != nil {
                                                 Color.red
                                                 
@@ -83,5 +97,6 @@ struct ShopSectionView_Previews: PreviewProvider {
     static var previews: some View {
         ShopView()
             .preferredColorScheme(.dark)
+            .environmentObject(NavigationHelper())
     }
 }
