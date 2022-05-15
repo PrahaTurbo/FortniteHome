@@ -14,6 +14,7 @@ struct ShopCollection: Codable {
     var specialDailySection: [Shop.ShopData.ShopSection.Entry]
     var votesSection: [Shop.ShopData.ShopSection.Entry]
     var voteWinnersSection: [Shop.ShopData.ShopSection.Entry]
+    var date: Date
 
     
     init(from decoder: Decoder) throws {
@@ -25,6 +26,7 @@ struct ShopCollection: Codable {
         specialDailySection = collection.data.specialDaily?.entries ?? []
         votesSection = collection.data.votes?.entries ?? []
         voteWinnersSection = collection.data.voteWinners?.entries ?? []
+        date = collection.data.date
     }
 }
 

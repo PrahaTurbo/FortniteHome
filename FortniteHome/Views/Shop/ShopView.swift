@@ -16,6 +16,7 @@ struct ShopView: View {
                 Color("Dark").ignoresSafeArea()
                 
                 ScrollView {
+                    
                     VStack {
                         ShopSection(items: viewModel.featuredSection, title: "featured-title")
                         
@@ -43,10 +44,23 @@ struct ShopView: View {
                 }
             }
             .task {
-                viewModel.isLoading = false
                 await viewModel.getItems()
             }
             .navigationTitle("shop-title")
+            .onReceive(viewModel.timer) { input in
+                Task {
+                   await viewModel.countdown(input: input)
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if !viewModel.isLoading {
+                        Text(viewModel.timeRemaining)
+                            .foregroundColor(.secondary)
+                            .font(.subheadline.bold())
+                    }
+                }
+            }
             
         }
     }
