@@ -1,5 +1,5 @@
 //
-//  Service.swift
+//  NetworkService.swift
 //  FortniteHome
 //
 //  Created by Артем Ластович on 16.04.2022.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Service  {
+struct NetworkService  {
     
-    enum ServiceError: Error {
-        case badUrl, fetchFailed, decodeFailed
-    }
+    static let shared = NetworkService()
+    
+    private init() { }
     
     func fetchData<T: Codable>(url: String) async throws -> T {
         

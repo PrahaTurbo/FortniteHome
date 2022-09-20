@@ -5,9 +5,8 @@
 //  Created by Артем Ластович on 20.04.2022.
 //
 
-import SwiftUI
 import NukeUI
-
+import SwiftUI
 
 struct NewsItemCard: View {
     @Namespace var namespace
@@ -42,7 +41,6 @@ struct NewsItemCard: View {
                                         .matchedGeometryEffect(id: "title", in: namespace)
                                         .transition(.offset())
                                 }
-                                
                             }
                             .aspectRatio(16/8, contentMode: .fit)
 
@@ -61,7 +59,6 @@ struct NewsItemCard: View {
                                 
                                 Spacer(minLength: 20)
                             }
-                            
                         }
                         .background(
                             image
@@ -72,12 +69,11 @@ struct NewsItemCard: View {
                         Color.red
                             .aspectRatio(16/8, contentMode: .fill)
                         
-                        Image(systemName: "xmark")
+                        K.SFSymbols.xmark
                             .font(.largeTitle)
                     } else {
-                        Color("Light")
+                        K.Colors.secondaryColor
                             .aspectRatio(16/8, contentMode: .fill)
-                        
                     }
                 }
                 .frame(maxWidth: .infinity)

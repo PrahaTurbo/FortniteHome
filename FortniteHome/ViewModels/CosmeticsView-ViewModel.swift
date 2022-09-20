@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 @MainActor final class CosmeticsViewModel: ObservableObject {
     @Published var cosmeticItems = [Cosmetics.Item]()
     @Published var sortingTypes = [Cosmetics.Types.RawValue]()
@@ -13,19 +14,10 @@ import Foundation
     @Published var currentSortingType: Cosmetics.Types = .all
     @Published var isLoading = false
     
-    let url = "https://fortnite-api.com/v2/cosmetics/br?language="
-    
-    var localLanguage = Locale.preferredLanguages.first?.dropLast(3)
-    
-    var wrappedLanguage: String {
-        if localLanguage == "ru" {
-            return String(localLanguage ?? "ru")
-        } else {
-            return "en"
-        }
+    private let url = "https://fortnite-api.com/v2/cosmetics/br?language="
+    private var language: String {
+        return Locale.preferredLanguages.first?.dropLast(3) == "ru" ? "ru" : "en"
     }
-    
-    private let service = Service()
     
     var filteredItems: [Cosmetics.Item] {
         if searchText.isEmpty {
@@ -63,19 +55,21 @@ import Foundation
     }
     
     func getCosmeticItems() async {
-        do {
-            isLoading = true
-            
-            let result: Cosmetics = try await service.fetchData(url: url + wrappedLanguage)
-            cosmeticItems = result.items
-            let types = result.items.map { $0.type.value }
-            var uniqueTypes = Set(types).sorted()
-            uniqueTypes.insert("all", at: 0)
-            sortingTypes = uniqueTypes
-            
-            isLoading = false
-        } catch {
-            print(error.localizedDescription)
+        if cosmeticItems.isEmpty {
+            do {
+                isLoading = true
+                
+                let result: Cosmetics = try await NetworkService.shared.fetchData(url: url + language)
+                cosmeticItems = result.items
+                let types = result.items.map { $0.type.value }
+                var uniqueTypes = Set(types).sorted()
+                uniqueTypes.insert("all", at: 0)
+                sortingTypes = uniqueTypes
+                
+                isLoading = false
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }

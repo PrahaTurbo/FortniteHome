@@ -13,7 +13,9 @@ struct ShopItemDetailsView: View {
     
     var body: some View {
         ZStack {
-            Color("Dark").ignoresSafeArea()
+            K.Colors.primaryColor
+                .ignoresSafeArea()
+            
             ScrollView {
                 VStack(alignment: .leading) {
                     TabView {
@@ -27,10 +29,10 @@ struct ShopItemDetailsView: View {
                                         Color.red
                                             .aspectRatio(1, contentMode: .fill)
                                         
-                                        Image(systemName: "xmark")
+                                        K.SFSymbols.xmark
                                             .font(.largeTitle)
                                     } else {
-                                        Color("Light")
+                                        K.Colors.secondaryColor
                                             .aspectRatio(1, contentMode: .fill)
                                         
                                         ProgressView()

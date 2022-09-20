@@ -29,11 +29,10 @@ struct ItemsList: View {
                                 } else if state.error != nil {
                                     Color.red
                                     
-                                    Image(systemName: "xmark")
+                                    K.SFSymbols.xmark
                                         .font(.largeTitle)
                                 } else {
-                                    Color("Light")
-                                    
+                                    K.Colors.secondaryColor
                                 }
                             }
                             .aspectRatio(1, contentMode: .fit)
@@ -55,7 +54,7 @@ struct ItemsList: View {
                         
                     }
                     .frame(maxWidth: .infinity)
-                    .background(Color("Light"))
+                    .background(K.Colors.secondaryColor)
                     .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                 }
                 .buttonStyle(ScaledButton())
@@ -74,11 +73,10 @@ struct ItemsList: View {
                                 } else if state.error != nil {
                                     Color.red
                                     
-                                    Image(systemName: "xmark")
+                                    K.SFSymbols.xmark
                                         .font(.largeTitle)
                                 } else {
-                                    Color("Light")
-                                    
+                                    K.Colors.secondaryColor
                                 }
                             }
                             .aspectRatio(1, contentMode: .fit)
@@ -100,7 +98,7 @@ struct ItemsList: View {
                         
                     }
                     .frame(maxWidth: .infinity)
-                    .background(Color("Light"))
+                    .background(K.Colors.secondaryColor)
                     .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                 }
                 .buttonStyle(ScaledButton())
@@ -110,7 +108,7 @@ struct ItemsList: View {
 }
 
 struct ItemsList_Previews: PreviewProvider {
-    static var items: Cosmetics = Bundle.main.decode("cosmeticsItems.json")
+    static var items: Cosmetics = Bundle.main.decode("cosmeticsExample.json")
     
     static var previews: some View {
         ItemsList(items: items.items)

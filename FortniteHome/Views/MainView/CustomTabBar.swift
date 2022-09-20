@@ -9,10 +9,20 @@ import SwiftUI
 
 struct CustomTabBar: View {
     enum Tab: String, CaseIterable {
-        case news = "newspaper"
-        case shop = "cart"
-        case cosmetics = "tshirt"
-        case stats = "person"
+        case news, shop, cosmetics, stats
+        
+        var name: String {
+            switch self {
+            case .news:
+                return K.SFSymbols.news
+            case .shop:
+                return K.SFSymbols.shop
+            case .cosmetics:
+                return K.SFSymbols.cosmetics
+            case .stats:
+                return K.SFSymbols.stats
+            }
+        }
     }
     
     @StateObject var shopNavigationHelper = NavigationHelper()
@@ -46,14 +56,11 @@ struct CustomTabBar: View {
                         TabButton(tab: tab)
                     }
                 }
-                    .padding(.vertical)
-                    .padding(.bottom, getSaveArea().bottom == 0 ? 10 : (getSaveArea().bottom - 10))
-                    .background(
-                        Color("Light")
-                    )
+                .padding(.vertical)
+                .padding(.bottom, getSaveArea().bottom == 0 ? 10 : (getSaveArea().bottom - 10))
+                .background(K.Colors.secondaryColor),
                 
-                ,alignment: .bottom
-                
+                alignment: .bottom
             )
             .ignoresSafeArea(.all, edges: .bottom)
             .preferredColorScheme(.dark)
@@ -62,12 +69,12 @@ struct CustomTabBar: View {
     
     @ViewBuilder
     func TabButton(tab: Tab) -> some View {
-        Image(systemName: currentTab == tab ? "\(tab.rawValue).fill" : tab.rawValue)
+        Image(systemName: currentTab == tab ? "\(tab.name).fill" : tab.name)
             .resizable()
             .scaledToFit()
             .frame(width: 22, height: 22)
             .frame(maxWidth: .infinity)
-            .foregroundColor(currentTab == tab ? Color("Yellow") : .secondary)
+            .foregroundColor(currentTab == tab ? K.Colors.accentColor : .secondary)
             .contentShape(Rectangle())
             .onTapGesture {
                 if currentTab == tab {
@@ -86,20 +93,5 @@ struct CustomTabBar: View {
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
         CustomTabBar()
-            .environmentObject(CosmeticsViewModel())
-    }
-}
-
-extension View {
-    func getSaveArea() -> UIEdgeInsets {
-        guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
-            return .zero
-        }
-        
-        guard let saveArea = screen.windows.first?.safeAreaInsets else {
-            return .zero
-        }
-        
-        return saveArea
     }
 }

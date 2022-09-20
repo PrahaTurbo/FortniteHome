@@ -32,8 +32,8 @@ struct StatsErrorCard: View {
                     .frame(maxWidth: .infinity)
                     .font(.title2.bold())
                     .padding()
-                    .foregroundColor(Color("Dark"))
-                    .background(Color("Yellow"))
+                    .foregroundColor(K.Colors.primaryColor)
+                    .background(K.Colors.accentColor)
                     .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             }
             .buttonStyle(ScaledButton())

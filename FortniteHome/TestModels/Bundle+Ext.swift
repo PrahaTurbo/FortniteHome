@@ -1,5 +1,5 @@
 //
-//  Bundle-Decodable.swift
+//  Bundle+Ext.swift
 //  FortniteHome
 //
 //  Created by Артем Ластович on 23.04.2022.

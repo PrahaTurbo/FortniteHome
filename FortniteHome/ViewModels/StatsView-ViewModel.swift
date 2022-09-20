@@ -24,17 +24,15 @@ extension StatsView {
             }
         }
         
-        var trimmedName: String {
+        private var trimmedName: String {
             name.trimmingCharacters(in: .whitespacesAndNewlines)
         }
         
-        let url = "https://fortnite-api.com/v2/stats/br/v2?name="
-        
-        private let service = Service()
-        
+        private let url = "https://fortnite-api.com/v2/stats/br/v2?name="
+                
         func getStats() async {
             do {
-                let result: Stats = try await service.fetchData(url: url + trimmedName)
+                let result: Stats = try await NetworkService.shared.fetchData(url: url + trimmedName)
                 stats = result
             } catch {
                 print(error.localizedDescription)
@@ -53,6 +51,7 @@ extension StatsView {
                     return
                 }
             }
+            
             name = ""
         }
     }

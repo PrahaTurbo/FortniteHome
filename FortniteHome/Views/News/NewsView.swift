@@ -7,34 +7,27 @@
 
 import SwiftUI
 
-struct ScaledButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeInOut, value: configuration.isPressed)
-    }
-}
-
 struct NewsView: View {
-    @StateObject private var viewModel: ViewModel
-    
+    @StateObject private var viewModel = ViewModel()
+
     var body: some View {
         NavigationView {
             ZStack {
-                Color("Dark").ignoresSafeArea()
-                
+                K.Colors.primaryColor
+                    .ignoresSafeArea()
+
                 ScrollView {
-                        ScrollViewReader { proxy in
-                            ForEach(viewModel.battleRoyaleNews.reversed(), id: \.self) { item in
-                                NewsItemCard(item: item) { news in
-                                    proxy.scrollTo(news.hashValue, anchor: UnitPoint(x: 0.5, y: 0.1))
-                                }
-                                .buttonStyle(ScaledButton())
-                                .id(item.hashValue)
-                                .padding(.horizontal)
+                    ScrollViewReader { proxy in
+                        ForEach(viewModel.battleRoyaleNews.reversed(), id: \.self) { item in
+                            NewsItemCard(item: item) { news in
+                                proxy.scrollTo(news.hashValue, anchor: UnitPoint(x: 0.5, y: 0.1))
                             }
-                            .padding(.bottom, 40)
-                            .padding(.bottom, getSaveArea().bottom == 0 ? 20 : 0)
+                            .buttonStyle(ScaledButton())
+                            .id(item.hashValue)
+                            .padding(.horizontal)
+                        }
+                        .padding(.bottom, 40)
+                        .padding(.bottom, getSaveArea().bottom == 0 ? 20 : 0)
                     }
                 }
             }
@@ -43,10 +36,6 @@ struct NewsView: View {
             }
             .navigationTitle("news-title")
         }
-    }
-    
-    init() {
-        _viewModel = StateObject(wrappedValue: ViewModel())
     }
 }
 

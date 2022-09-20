@@ -11,6 +11,26 @@ struct CosmeticsTypeFilter: View {
     let types: [Cosmetics.Types.RawValue]
     @Binding var sortSelection: Cosmetics.Types
     
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(0..<types.count, id: \.self) { index in
+                    Text(LocalizedStringKey(localizedTypes[index]))
+                        .font(.subheadline)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .foregroundColor(sortSelection.rawValue == types[index] ?                 K.Colors.primaryColor : .secondary)
+                        .background(sortSelection.rawValue == types[index]  ? K.Colors.accentColor : K.Colors.secondaryColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .onTapGesture {
+                            sortSelection = Cosmetics.Types(rawValue: types[index]) ?? .all
+                        }
+                }
+            }
+            .padding(.horizontal)
+        }
+    }
+    
     var localizedTypes: [String] {
         var results = [String]()
         
@@ -44,26 +64,6 @@ struct CosmeticsTypeFilter: View {
         }
                 
         return results
-    }
-    
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(0..<types.count, id: \.self) { index in
-                    Text(LocalizedStringKey(localizedTypes[index]))
-                        .font(.subheadline)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 5)
-                        .foregroundColor(sortSelection.rawValue == types[index] ? Color("Dark") : .secondary)
-                        .background(sortSelection.rawValue == types[index]  ? Color("Yellow") : Color("Light"))
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                        .onTapGesture {
-                            sortSelection = Cosmetics.Types(rawValue: types[index]) ?? .all
-                        }
-                }
-            }
-            .padding(.horizontal)
-        }
     }
 }
 

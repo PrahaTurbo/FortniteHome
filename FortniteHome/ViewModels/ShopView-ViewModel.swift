@@ -16,24 +16,15 @@ extension ShopView {
         @Published var votesSection = [Shop.ShopData.ShopSection.Entry]()
         @Published var voteWinnersSection = [Shop.ShopData.ShopSection.Entry]()
         @Published var date = Date()
-        
+        @Published var currentDate = Date()
         @Published var isLoading = true
         
-        let url = "https://fortnite-api.com/v2/shop/br?language="
-        
-        var localLanguage = Locale.preferredLanguages.first?.dropLast(3)
-        
-        var wrappedLanguage: String {
-            if localLanguage == "ru" {
-                return String(localLanguage ?? "ru")
-            } else {
-                return "en"
-            }
+        private let url = "https://fortnite-api.com/v2/shop/br?language="
+        private var language: String {
+            return Locale.preferredLanguages.first?.dropLast(3) == "ru" ? "ru" : "en"
         }
         
-        @Published var currentDate = Date()
         let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-        
         var timeRemaining: String {
             let components = Calendar.current.dateComponents([.hour, .minute, .second], from: currentDate, to: date)
             
@@ -53,11 +44,9 @@ extension ShopView {
             }
         }
         
-        private let service = Service()
-        
         func getItems() async {
             do {
-                let result: ShopCollection = try await service.fetchData(url: url + wrappedLanguage)
+                let result: ShopCollection = try await NetworkService.shared.fetchData(url: url + language)
                 featuredSection = result.featuredSection
                 dailySection = result.dailySection
                 specialFeaturedSection = result.specialFeaturedSection

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ShopView: View {
-    @StateObject private var viewModel: ViewModel
+    @StateObject private var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color("Dark").ignoresSafeArea()
+                K.Colors.primaryColor
+                    .ignoresSafeArea()
                 
                 ScrollView {
-                    
                     VStack {
                         ShopSection(items: viewModel.featuredSection, title: "featured-title")
                         
@@ -29,7 +29,6 @@ struct ShopView: View {
                         ShopSection(items: viewModel.voteWinnersSection, title: "vote-winners-title")
                         
                         ShopSection(items: viewModel.votesSection, title: "votes-title")
-                        
                     }
                     .padding(.horizontal)
                     .padding(.bottom, -20)
@@ -37,7 +36,7 @@ struct ShopView: View {
                 }
                 
                 if viewModel.isLoading {
-                    Color("Dark")
+                    K.Colors.primaryColor
                         .ignoresSafeArea()
                     
                     ProgressView()
@@ -49,7 +48,7 @@ struct ShopView: View {
             .navigationTitle("shop-title")
             .onReceive(viewModel.timer) { input in
                 Task {
-                   await viewModel.countdown(input: input)
+                    await viewModel.countdown(input: input)
                 }
             }
             .toolbar {
@@ -61,12 +60,7 @@ struct ShopView: View {
                     }
                 }
             }
-            
         }
-    }
-    
-    init() {
-        _viewModel = StateObject(wrappedValue: ViewModel())
     }
 }
 

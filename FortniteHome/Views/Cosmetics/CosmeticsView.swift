@@ -13,7 +13,9 @@ struct CosmeticsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("Dark").ignoresSafeArea()
+                K.Colors.primaryColor
+                    .ignoresSafeArea()
+                
                 ScrollView {
                     LazyVStack {
                         SearchBar(searchText: $viewModel.searchText)
@@ -25,7 +27,6 @@ struct CosmeticsView: View {
                         
                         ItemsList(items: viewModel.sortedItems, selectionIsOn: true)
                             .padding(.horizontal)
-                        
                     }
                     .padding(.bottom, 40)
                     .padding(.bottom, getSaveArea().bottom == 0 ? 20 : 0)
@@ -34,7 +35,7 @@ struct CosmeticsView: View {
                 .navigationTitle("items-title")
                 
                 if viewModel.isLoading {
-                    Color("Dark")
+                    K.Colors.primaryColor
                         .ignoresSafeArea()
                     
                     ProgressView()
@@ -45,7 +46,6 @@ struct CosmeticsView: View {
 }
 
 struct CosmeticsView_Previews: PreviewProvider {
-    
     static var previews: some View {
         CosmeticsView()
             .environmentObject(CosmeticsViewModel())

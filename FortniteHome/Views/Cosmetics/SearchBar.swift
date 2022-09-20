@@ -16,10 +16,10 @@ struct SearchBar: View {
             HStack {
                 ZStack {
                     Rectangle()
-                        .fill(Color("Light"))
+                        .fill(K.Colors.secondaryColor)
                     
                     HStack {
-                        Image(systemName: "magnifyingglass")
+                        K.SFSymbols.magnifyingGlass
                         
                         TextField("search-placeholder", text: $searchText)
                             .focused($searchIsFocused)
@@ -30,7 +30,7 @@ struct SearchBar: View {
                             Button {
                                 searchText = ""
                             } label: {
-                                Image(systemName: "xmark.circle.fill")
+                                K.SFSymbols.xmarkCircle
                             }
                             .padding(.trailing, 13)
                         }

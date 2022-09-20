@@ -25,9 +25,9 @@ struct StatsSuccessCard: View {
                         viewModel.reset()
                     }
                 } label: {
-                    Image(systemName: "xmark.circle.fill")
+                    K.SFSymbols.xmarkCircle
                         .font(.title)
-                        .foregroundColor(Color("Yellow"))
+                        .foregroundColor(K.Colors.accentColor)
                 }
             }
             
@@ -109,12 +109,12 @@ struct StatsSuccessCard: View {
                     
                 }
             } else {
-                StatsErrorCard(title: "no-stats-yet", icon: "exclamationmark.triangle.fill", iconColor: Color("Yellow"))
+                StatsErrorCard(title: "no-stats-yet", icon: "exclamationmark.triangle.fill", iconColor: K.Colors.accentColor)
             }
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color("Light"))
+        .background(K.Colors.secondaryColor)
         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
         .transition(.scale)
     }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct StatsView: View {
-    @StateObject private var viewModel: ViewModel
+    @StateObject private var viewModel = ViewModel()
     @FocusState private var isFocusing: Bool
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color("Dark")
+                K.Colors.primaryColor
                     .ignoresSafeArea()
                 
                 VStack {
@@ -38,13 +38,12 @@ struct StatsView: View {
                                     Button {
                                         viewModel.name = ""
                                     } label: {
-                                        Image(systemName: "xmark.circle.fill")
-                                        
+                                        K.SFSymbols.xmarkCircle
                                     }
                                 }
                             }
                             .padding()
-                            .background(Color("Dark"))
+                            .background(K.Colors.primaryColor)
                             .foregroundColor(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                             
@@ -67,15 +66,15 @@ struct StatsView: View {
                                     .frame(maxWidth: .infinity)
                                     .font(.title2.bold())
                                     .padding()
-                                    .foregroundColor(Color("Dark"))
-                                    .background(Color("Yellow"))
+                                    .foregroundColor(K.Colors.primaryColor)
+                                    .background(K.Colors.accentColor)
                                     .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                             }
                             .buttonStyle(ScaledButton())
                             .padding(.vertical)
                         }
                         .padding()
-                        .background(Color("Light"))
+                        .background(K.Colors.secondaryColor)
                         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                         .transition(.scale)
                     }
@@ -89,7 +88,7 @@ struct StatsView: View {
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color("Light"))
+                            .background(K.Colors.secondaryColor)
                             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                             .transition(.scale)
                         }
@@ -104,10 +103,6 @@ struct StatsView: View {
             }
         }
         .environmentObject(viewModel)
-    }
-    
-    init() {
-        _viewModel = StateObject(wrappedValue: ViewModel())
     }
 }
 

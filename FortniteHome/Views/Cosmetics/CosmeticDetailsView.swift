@@ -11,57 +11,36 @@ import NukeUI
 struct CosmeticDetailsView: View {
     let item: Cosmetics.Item
     @EnvironmentObject private var viewModel: CosmeticsViewModel
-
+    
     var body: some View {
         ZStack {
-            Color("Dark").ignoresSafeArea()
-
+            K.Colors.primaryColor
+                .ignoresSafeArea()
+            
             ScrollView {
                 VStack(alignment: .leading) {
                     TabView {
-                        if let url = item.images.featured {
-                            LazyImage(source: url) { state in
-                                if let image = state.image {
-                                    image
-                                        .resizingMode(.aspectFit)
-                                } else if state.error != nil {
-                                    Color.red
-                                        .aspectRatio(1, contentMode: .fill)
-                                    
-                                    Image(systemName: "xmark")
-                                        .font(.largeTitle)
-                                } else {
-                                    Color("Light")
-                                        .aspectRatio(1, contentMode: .fill)
-                                }
+                        LazyImage(source: item.images.featured != nil ? item.images.featured : item.images.icon) { state in
+                            if let image = state.image {
+                                image
+                                    .resizingMode(.aspectFit)
+                            } else if state.error != nil {
+                                Color.red
+                                    .aspectRatio(1, contentMode: .fill)
+                                
+                                K.SFSymbols.xmark
+                                    .font(.largeTitle)
+                            } else {
+                                K.Colors.secondaryColor                                       .aspectRatio(1, contentMode: .fill)
                             }
-                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                            
-                        } else if let url = item.images.icon {
-                            LazyImage(source: url) { state in
-                                if let image = state.image {
-                                    image
-                                        .resizingMode(.aspectFit)
-                                } else if state.error != nil {
-                                    Color.red
-                                        .aspectRatio(1, contentMode: .fill)
-                                    
-                                    Image(systemName: "xmark")
-                                        .font(.largeTitle)
-                                } else {
-                                    Color("Light")
-                                        .aspectRatio(1, contentMode: .fill)
-                                }
-                            }
-                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                         }
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                         
                         if let showcaseVideo = item.showcaseVideo {
                             VideoView(videoId: showcaseVideo)
                                 .aspectRatio(1, contentMode: .fit)
                                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                         }
-                        
                     }
                     .tabViewStyle(.page)
                     .aspectRatio(1, contentMode: .fit)
@@ -89,7 +68,7 @@ struct CosmeticDetailsView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
-                    .background(Color("Light"))
+                    .background(K.Colors.secondaryColor)
                     .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                     .padding(.vertical)
                     
@@ -121,7 +100,7 @@ struct CosmeticDetailsView: View {
 }
 
 struct CosmeticDetailsView_Previews: PreviewProvider {
-    static let collection: Cosmetics = Bundle.main.decode("cosmeticsItems.json")
+    static let collection: Cosmetics = Bundle.main.decode("cosmeticsExample.json")
     
     static var previews: some View {
         CosmeticDetailsView(item: collection.items[0])

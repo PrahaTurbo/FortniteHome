@@ -9,7 +9,6 @@ import SwiftUI
 import NukeUI
 
 struct ShopSection: View {
-    @EnvironmentObject var navigationHelper: NavigationHelper
     
     let items: [Shop.ShopData.ShopSection.Entry]
     let title: LocalizedStringKey
@@ -25,61 +24,7 @@ struct ShopSection: View {
                 Section {
                     LazyVGrid(columns: columns) {
                         ForEach(items, id: \.offerId) { item in
-                            if let url = item.newDisplayAsset?.materialInstances[0].images["Background"] {
-                                NavigationLink(tag: item.offerId, selection: $navigationHelper.selection) {
-                                    ShopItemDetailsView(entry: item)
-                                } label: {
-                                    ZStack(alignment: .bottomLeading) {
-                                        LazyImage(source: url) { state in
-                                            if let image = state.image {
-                                                ZStack(alignment: .topLeading) {
-                                                    image
-                                                        .resizingMode(.aspectFit)
-                                                    
-                                                    if let bannerText = item.banner?.value {
-                                                        if bannerText == "New!" || bannerText == "Новинка!" {
-                                                            Text(bannerText)
-                                                                .font(.subheadline.bold())
-                                                                .padding(5)
-                                                                .background(Color("Yellow"))
-                                                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                                                .padding(10)
-                                                                .foregroundColor(Color("Dark"))
-                                                                
-                                                        }
-                                                    }
-                                                }
-                                            } else if state.error != nil {
-                                                Color.red
-                                                
-                                                Image(systemName: "xmark")
-                                                    .font(.largeTitle)
-                                            } else {
-                                                Color("Light")
-                                                
-                                            }
-                                        }
-                                        .aspectRatio(1, contentMode: .fit)
-                                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                                        
-                                        HStack {
-                                            Text(String(item.finalPrice))
-                                                .font(.title3.weight(.black))
-                                            
-                                            Image("vbucks")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 25)
-                                        }
-                                        .padding(10)
-                                        .shadow(radius: 5)
-                                        
-                                    }
-                                    .background(.ultraThinMaterial)
-                                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                                }
-                                .buttonStyle(ScaledButton())
-                            }
+                            ShopItemCard(item: item)
                         }
                     }
                 } header: {
